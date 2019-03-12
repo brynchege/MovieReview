@@ -6,8 +6,24 @@
        <p></p>
        <p>Movie List</p>
 
-    {% for movie in Movies %}
-        <p>{{ movie.movie_name }}</p>
-    {% endfor %}
+
+        <table>
+        <thead>
+        <th>Movie Name</th>
+        <th>Details</th>
+        <th>Review</th>
+        </thead>
+        <tbody>
+        {% for movie in Movies %}
+        <tr>
+        <td>{{ movie.movie_name }}</td>
+        <td>{{ movie.movie_detail }}</td>
+        <td>{{ movie.movie_review }}</td>
+        </tr>
+        {% endfor %}
+        </tbody>
+        </table>
+
+
    </div>
  {% endblock %}
