@@ -1,0 +1,60 @@
+{% include "MovieReview/header.html" %}
+<body>
+<div class="container-fluid">
+		<div class="container">
+			<div class="formBox">
+				<form class="contact-form" method="post" action="add_movie_form_submission/">
+                    {% csrf_token %}
+
+						<div class="row">
+							<div class="col-sm-6">
+								<div class="inputBox ">
+									<div class="">Name</div>
+									<input type="text" name="movie_name" class="input">
+								</div>
+							</div>
+
+							<div class="col-sm-6">
+								<div class="inputBox">
+									<div class="">Type</div>
+									<input type="text" name="movie_type" class="input">
+								</div>
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="col-sm-6">
+								<div class="inputBox">
+									<div class="">Review</div>
+									<input type="text" name="movie_review" class="input">
+								</div>
+							</div>
+
+							<div class="col-sm-6">
+								<div class="inputBox">
+									<div class="">Release Date</div>
+									<input type="text" name="movie_release_date" class="input">
+								</div>
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="col-sm-12">
+								<div class="inputBox">
+									<div class="">Details</div>
+                                    <textarea name="movie_details" class="input"></textarea>
+								</div>
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="col-sm-12">
+								<input type="submit" name="" class="button" value="Add Movie">
+							</div>
+						</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

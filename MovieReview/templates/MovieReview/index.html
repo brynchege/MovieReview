@@ -1,0 +1,13 @@
+
+ {% include "MovieReview/header.html" %}
+
+ {% block content %}
+   <div class="container info-boxes pt100 pb100">
+       <p></p>
+       <p>Movie List</p>
+
+    {% for movie in Movies %}
+        <p>{{ movie.movie_name }}</p>
+    {% endfor %}
+   </div>
+ {% endblock %}
